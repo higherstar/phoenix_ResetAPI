@@ -28,11 +28,8 @@ defmodule Playdays.Query do
   ConsumerQuery.find_one(%{email: "someone@example.com"})
 
   """
-
   import Ecto.Query
-
   alias Playdays.Repo
-
   defmacro __using__(opts) do
     quote do
       @model Keyword.get(unquote(opts), :model)
